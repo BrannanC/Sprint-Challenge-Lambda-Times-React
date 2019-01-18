@@ -75,7 +75,7 @@ const CRSpan = styled.span`
   cursor: pointer;
 `;
 
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <TopBarDiv>
       <TopContainer>
@@ -87,7 +87,7 @@ const TopBar = () => {
           <CCSpan>RANDOM</CCSpan><CCSpan>MUSIC</CCSpan><CCSpan>ANNOUNCEMENTS</CCSpan>
         </ContainerCenter>
         <ContainerRight>
-          <CRSpan>LOG IN</CRSpan>
+          <CRSpan onClick={props.clickedLogin} >{props.isLoggedIn ? 'LOG OUT' : 'LOG IN'}</CRSpan>
         </ContainerRight>
       </TopContainer>
     </TopBarDiv>
